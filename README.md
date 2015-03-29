@@ -45,6 +45,25 @@ probably will want to load them in with this:
 I18n.backend.load_translations
 ```
 
+Then end result of the code above is that the my_app_i18n database would
+have a collection called "i18n" which contains a bunch of documents that
+look something like this:
+
+```
+{ "key": "en.hello", "value": "\"Hello world\"" }
+{ "key": "fr.hello", "value": "\"Bonjour le monde\"" }
+```
+Your translations then work as normal:
+
+```ruby
+[3] pry(#<#<Class:0x007f06e47ef788>>)> t("hello")
+=> "Hello world"
+[4] pry(#<#<Class:0x007f06e47ef788>>)> I18n.locale = :fr
+=> :fr
+[5] pry(#<#<Class:0x007f06e47ef788>>)> t("hello")
+=> "Bonjour le monde"
+```
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `bin/console` for an interactive prompt that will allow you to experiment.
