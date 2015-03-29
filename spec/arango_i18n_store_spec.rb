@@ -54,7 +54,7 @@ module ArangoI18n
     it "returns the list of available locales" do
       store["en.foo"]="bar"
       store["fr.foo"]="le bar"
-      expect(store.available_locales).to eq ["en", "fr"]
+      expect(store.available_locales).to match_array ["en", "fr"]
     end
 
   end
