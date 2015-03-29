@@ -9,10 +9,6 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Mike Williamson"]
   spec.email         = ["mike@korora.ca"]
 
-  if spec.respond_to?(:metadata)
-    spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com' to prevent pushes to rubygems.org, or delete to allow pushes to any server."
-  end
-
   spec.summary       = "Use ArangoDB as your I18n backend."
   spec.description   = "Use the multi-modal ArangoDB as your I18n backend."
   spec.homepage      = "http://github.com/sleepycat/arango_i18n"
